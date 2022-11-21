@@ -5,7 +5,7 @@
 newp-NEW PROJECT
 saving-SAVE
 load-LOAD
-erease-EREASE
+erase-ERASE
 room-ADD ROOM
 fuse-FUSE
 join-JOIN

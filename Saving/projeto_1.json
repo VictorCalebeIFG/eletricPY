@@ -1194,6 +1194,63 @@
                 "font_size": 8
             },
             "parent": "comodo_THPQHMIPKC"
+        },
+        {
+            "elemetkey": "comodo_PWQRMWMPAN",
+            "Arguments": {
+                "tipo": "quarto",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "space_JYLURNZAVZ",
+            "Arguments": {
+                "lado": "left",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_PWQRMWMPAN"
+        },
+        {
+            "elemetkey": "comodo_JSHGFWSUOI",
+            "Arguments": {
+                "tipo": "quarto",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "space_ACVLUZRISH",
+            "Arguments": {
+                "lado": "left",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_JSHGFWSUOI"
+        },
+        {
+            "elemetkey": "comodo_SJWNBNRXDZ",
+            "Arguments": {
+                "tipo": "quarto",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "space_OZJQCMFFSU",
+            "Arguments": {
+                "lado": "left",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_SJWNBNRXDZ"
         }
     ]
 }

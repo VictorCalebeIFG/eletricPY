@@ -82,7 +82,7 @@ class Janela:
       return rd
 
   def explode(self,event = None):
-      if self.pc.state == 'erease':
+      if self.pc.state == 'erase':
           [self.pc.draw_canvas.delete(id) for id in self.id_list]
 
   def die(self):

@@ -1,7 +1,7 @@
 #Esse arquivo serve para configurar todos os icones que
 #quando clicados nos botões seguem o mouse.
 
-erease
+erase
 room
 condu
 lamp

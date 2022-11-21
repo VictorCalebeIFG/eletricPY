@@ -27,9 +27,9 @@ class Fonte:
     
     def explode(self,event):
         '''MATA O DESENHO CASO ALGUÉM CLIQUE NELE COM A BORRACHA.
-        OU SEJA SÓ FUNCIONA CASO O STATE SEJA ->erease<-'''
+        OU SEJA SÓ FUNCIONA CASO O STATE SEJA ->erase<-'''
         
-        if self.pc.state == 'erease':
+        if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
         pass
 
