@@ -16,3 +16,4 @@ lamp-ADD LAMP
 tom-ADD TUG
 interr-ADD INTERRUP
 condu-ADD CONECTION
+info-INFORMAÇÕES

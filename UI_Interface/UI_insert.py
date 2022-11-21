@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import UI_backend
-from util_.util import open_config,create_tk_labels,create_tk_drop_down,create_double_frame_ui_by_text,polynomial_fit,generate_key
+from util_.util import open_config,create_tk_labels,create_tk_drop_down,create_double_frame_ui_by_text, create_double_frame_ui_only_text, polynomial_fit,generate_key
 from UI_Interface.popupModel import popup_ui
 from numpy import linspace,array
 from eletric_elements.Curva import Condutor
@@ -218,6 +218,24 @@ class new_window:
     def update(self, var):
         if self.window: self.window.die()
         self.window = UI_backend.create_window(self.pc.draw_canvas,self.pc, self.lado.get(), self.dim.get())
+
+class open_info:
+    def __init__(self,pc = None, master = None) -> None:
+        self.pop_w = tk.Toplevel(master)
+        self.pop_w.title("INFORMAÇÕES")
+        self.pop_w.geometry("370x250+550+200")
+        self.pc = pc
+        self.window = None
+
+        main_frame = tk.Frame(self.pop_w)
+        frameL = tk.Frame(main_frame)
+        frameE = tk.Frame(main_frame)
+
+        create_double_frame_ui_only_text(frameL,frameE,self=self,txt='UI/POPUP/informacoes_ui')
+
+        frameL.grid(row=0,column=0,padx=20,pady=20)
+        frameE.grid(row=0,column=1,padx=20,pady=20)
+        main_frame.pack(anchor=tk.CENTER,pady=10)
 
     
 

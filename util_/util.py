@@ -371,6 +371,12 @@ def create_double_frame_ui_by_text(frame1=None,frame2 = None,self = None,txt = N
                             from_ = int(list_[i][0]),to_ = int(list_[i][1]),comando=comm_[i])
     pass
 
+def create_double_frame_ui_only_text(frame1=None,frame2 = None,self = None,txt = None):
+    commands = open_config(txt)
+    create_tk_labels(frame1,commands)
+    pass
+
+
 def generate_key(element,kn=10):
     key = random.choices(string.ascii_uppercase,k=kn)
     key = ''.join(key)

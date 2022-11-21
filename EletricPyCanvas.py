@@ -4,6 +4,7 @@ import UI_Interface.UI_insert as UI_insert
 from util_.util import open_config
 
 mouse_follow = open_config('follow_mouse')
+pop_onclick = open_config('pop_onclick')
 
 class ProjectCanvas:
     def __init__(self,master,user_w,user_h,project_w,project_h):
@@ -86,7 +87,9 @@ class ProjectCanvas:
         self.frame.pack_forget()
     
     def set_state(self,bt_state):
-        
+        for pop in pop_onclick:
+            if(bt_state == pop):
+                UI_insert.open_info()
         for st in self.mouse_follow:
             self.verfiy_state(bt_state,v_state=st)
         if bt_state == 'normal':

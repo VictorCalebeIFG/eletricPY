@@ -1,0 +1,4 @@
+#Esse arquivo serve para configurar todos os icones que
+#quando clicados abrem uma janela.
+
+info
