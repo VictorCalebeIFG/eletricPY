@@ -5,6 +5,7 @@
 #STATE-CLASSE UI
 #
 
+room-new_attached_room
 lamp-new_lamp
 tom-new_tom
 interr-new_interr

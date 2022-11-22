@@ -45,12 +45,50 @@ def create_comodo(canvas,pc):
     
     return comodo
 
+def create_attached_room(canvas, pc, lado, referencia, parede):
+    paredes = {
+        "sim": True,
+        "nao": False
+    }
+
+    if (lado == "baixo"):
+        orientacoes = {
+        "esquerda": "F",
+        "direita": "G"
+        }
+        comodo = pc.current_obj.add_bottom(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+    if (lado == "cima"):
+        orientacoes = {
+        "esquerda": "B",
+        "direita": "C"
+        }    
+        comodo = pc.current_obj.add_top(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+    if (lado == "direita"):
+        orientacoes = {
+        "esquerda": "D",
+        "direita": "H"
+        }    
+        comodo = pc.current_obj.add_right(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+    if (lado == "esquerda"):
+        orientacoes = {
+        "esquerda": "A",
+        "direita": "E"
+        }    
+        comodo = pc.current_obj.add_left(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+
+
+    args = get_widgets_values(pc.popup.__dict__)
+
+    save(comodo.codekey,args,False,filename = current_project)
+    
+    return comodo
+
 def create_lamp(pc):
 
     args = get_widgets_values(pc.popup.__dict__)
 
     lampada = pc.current_obj.add_lamp(**args,pc=pc)
-
+ 
 
     if pc.popup.last == True:
         save(

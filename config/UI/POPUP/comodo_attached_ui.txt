@@ -1,0 +1,14 @@
+#ENTRY WIDGET:
+#LABEL-entry-VARNAME--/
+
+#SCALE WIDGET:
+#LABEL-scale-VARNAME-COMMAND-/FROM-TO
+
+#DROP DOWN WIDGET:
+#LABEL-dropdown-VARNAME-COMMAND-/LIST
+
+Lado:           -dropdown-lado-update-/direita-direita-esquerda-cima-baixo
+Largura:        -entry-largura--/
+Altura:         -entry-altura--/
+Referência:     -dropdown-referencia-update-/esquerda-esquerda-direita
+Parede:         -dropdown-parede-update-/sim-sim-nao

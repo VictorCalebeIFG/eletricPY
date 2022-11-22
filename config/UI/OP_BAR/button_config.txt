@@ -7,8 +7,6 @@ saving-SAVE
 load-LOAD
 erase-ERASE
 room-ADD ROOM
-fuse-FUSE
-join-JOIN
 window-ADD WINDOW
 door-ADD DOOR
 space-ADD SPACE

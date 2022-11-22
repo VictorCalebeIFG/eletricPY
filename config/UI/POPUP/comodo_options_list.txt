@@ -1,9 +1,0 @@
-# Esse arquivo possui as opçoes de tipos de comodo
-# São as opções quando o usuário pede para criar um novo comodo
-# O tipo de comodo default deve ser colocado duaz vezes nas duas primeiras linhas
-
-quarto
-quarto
-banheiro
-cozinha
-area de servico

@@ -53,6 +53,51 @@ class new_comodo:
     def update(self,var):
         None
 
+class new_attached_room:
+    def __init__(self,pc,master,pos = None) -> None:
+        self.pop_w = tk.Toplevel(master)
+        self.pop_w.title("Criar Novo Comodo")
+        self.pop_w.geometry("300x250+550+200")
+        self.pos = pos
+        self.pc = pc
+        self.pc.popup = self
+        self.id = generate_key('popup')
+
+
+        main_frame = tk.Frame(self.pop_w)
+
+        self.frameL = tk.Frame(main_frame)
+        self.frameE = tk.Frame(main_frame)
+
+        create_double_frame_ui_by_text(frame1=self.frameL,self=self,frame2=self.frameE,txt='UI/POPUP/comodo_attached_ui')
+
+        self.largura.set(5)
+        self.altura.set(3)
+        
+
+
+        self.frameL.grid(row=0,column=0,padx=20,pady=20)
+        self.frameE.grid(row=0,column=1,padx=20,pady=20)
+
+        main_frame.pack(anchor=tk.CENTER,pady=10)
+
+        createB = ttk.Button(self.pop_w,text='create',command=self.create_attached_room)
+        createB.pack()
+        pass
+    
+    def create_attached_room(self,delete = True):
+        if delete:
+            self.pop_w.destroy()
+            self.pop_w.update()
+
+        UI_backend.horizontal_dim = float(self.largura.get())
+        UI_backend.vertical_dim = float(self.altura.get())
+        
+        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get())
+
+    def update(self,var):
+        None
+
 class new_lamp(popup_ui):
     def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='550', topdis='200') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
