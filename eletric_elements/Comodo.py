@@ -1,5 +1,6 @@
 import math
 from random import random
+from eletric_elements import BlankSpace
 from util_.util import percent_line,shift_points,open_config,generate_key
 from eletric_elements.Interruptor import Interruptor_s1,Interruptor_s2,Interruptor_s3,Interruptor_3way,Interruptor_4way
 from eletric_elements.Lampada import Lampada
@@ -90,7 +91,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.F[0],s_y = self.F[1],canvas = self.canvas,scale=self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.tl_inp[0]+1,comodo.tl_inp[1]+1),comodo.C,fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("top", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
 
@@ -99,7 +100,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.F[0] + (self.bottom_dim - horizotal_dim),s_y = self.F[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.tl_inp[0]+1,comodo.tl_inp[1]+1),(comodo.C),fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("top", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
             return comodo
@@ -110,19 +111,20 @@ class Square_comodo_in_dim:
             eL = e ; eR = e ; eT = e ; eB = e
 
         if point == 'B':
+            #self.B[1]-vertical_dim + e/10 => sei lá pq + e/10
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.B[0],s_y = self.B[1]-vertical_dim,canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.B[0],s_y = self.B[1]-vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.F[0]+1,comodo.F[1]+1),comodo.br_inp,fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("botton", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
 
             return comodo
         elif point == 'C':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim,canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.F[0]+1,comodo.F[1]+1),comodo.br_inp,fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("botton", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
             return comodo
@@ -138,7 +140,7 @@ class Square_comodo_in_dim:
                                         s_x = self.D[0],s_y = self.D[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             
             if (not parede):
-                self.canvas.create_rectangle((comodo.tl_inp[0]+1,comodo.tl_inp[1]+1),comodo.E,fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("left", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
 
@@ -147,7 +149,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.D[0] ,s_y = self.D[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.tl_inp[0]+1,comodo.tl_inp[1]+1),comodo.E,fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("left", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
             
@@ -161,16 +163,16 @@ class Square_comodo_in_dim:
         if point == 'E':
             #Encaixa o ponto tr_inp do novo comodo no ponto A do comodo atual.
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.A[0] - horizotal_dim, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.A[0] - horizotal_dim + e/10, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.tr_inp[0],comodo.tr_inp[1]+1),(comodo.H[0]+1,comodo.H[1]),fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("right", comodo, 0, 0, comodo.pc)
             self.area = self.area + comodo.area + (eR*vertical_dim)
             return comodo
         elif point == 'A':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.A[0] - horizotal_dim ,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.A[0] - horizotal_dim + 1 + e/10,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                self.canvas.create_rectangle((comodo.tr_inp[0],comodo.tr_inp[1]+1),(comodo.H[0]+1,comodo.H[1]),fill = 'white',width = 0,tag = self.generate_random())
+                BlankSpace.Space("right", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eR*vertical_dim)
             return comodo
