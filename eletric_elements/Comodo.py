@@ -27,6 +27,9 @@ class Square_comodo_in_dim:
         self.border = canvas.create_rectangle(points,fill=color,outline = '',tag = self.generate_random())
         self.big_rect = canvas.create_rectangle(s[0],s[1],f[0],f[1],fill='white',outline = 'black',tag = self.generate_random())
 
+        self.delete_list.append(self.border)
+        self.delete_list.append(self.big_rect)
+
         self.bottom_dim = horizotal_dim
         self.top_dim = horizotal_dim
         self.right_dim = vertical_dim
@@ -295,6 +298,8 @@ class Square_comodo_in_dim:
     
     def clicked(self,event):
         if self.pc : self.pc.current_obj = self
+        if self.pc.state == "erase":
+            self.explode(self);
         for st in open_config('on_comodo_state_generate_ui'):
             if self.pc.state == st.split('-')[0]:
                 self.pc.set_state('normal')
@@ -341,3 +346,17 @@ class Square_comodo_in_dim:
         self.canvas.create_line((sp_1[0]+1,sp_1[1]+w),(sp_1[0]+self.eL+1,sp_1[1]+w))
         return sp_1,sp_2
 
+    def explode(self,event):
+        '''MATA O DESENHO CASO ALGUÉM CLIQUE NELE COM A BORRACHA.
+        OU SEJA SÓ FUNCIONA CASO O STATE SEJA ->erase<-'''
+
+        if self.pc.state == 'erase':
+            [self.pc.draw_canvas.delete(id) for id in self.delete_list]
+        pass
+
+    def die(self):
+        '''DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
+        ESTADO ->ereas<-'''
+        
+        for id in self.delete_list:
+            self.canvas.delete(id)
