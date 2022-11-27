@@ -50,7 +50,7 @@ class new_comodo:
 
         UI_backend.e = float(self.esp.get()) ; UI_backend.horizontal_dim = float(self.largura.get())
         UI_backend.vertical_dim = float(self.altura.get()) ; UI_backend.x = float(self.pos[0]) 
-        UI_backend.y = float(self.pos[1])
+        UI_backend.y = float(self.pos[1]); UI_backend.tipo = self.tipo.get()
         
         self.room = UI_backend.create_comodo(canvas=self.pc.draw_canvas,pc = self.pc)
     
@@ -288,16 +288,48 @@ class open_info:
         self.pop_w.geometry("370x250+550+200")
         self.pc = pc
         self.window = None
+        self.info = []
+        #Atributos necessários e repetidos
+        self.comodo = self.pc.current_obj
+        self.areaComodo = self.comodo.area
+        self.tipoComodo = self.comodo.tipo
 
         main_frame = tk.Frame(self.pop_w)
-        frameL = tk.Frame(main_frame)
-        frameE = tk.Frame(main_frame)
+        frame = tk.Frame(main_frame)
+        info = ["Testando", "TESTANDO NOVAMENTE"]
+        create_tk_labels(frame, info)
 
-        create_double_frame_ui_only_text(frameL,frameE,self=self,txt='UI/POPUP/informacoes_ui')
+        print(self.pc.current_obj.area)
+        print(self.pc.current_obj.tipo)
 
-        frameL.grid(row=0,column=0,padx=20,pady=20)
-        frameE.grid(row=0,column=1,padx=20,pady=20)
+        frame.grid(row=0,column=0,padx=20,pady=20)
         main_frame.pack(anchor=tk.CENTER,pady=10)
+
+    def criaInfo(self):
+        self.qntdTUGs();
+
+    def qntdTUGs(self):
+        nTomadas = 1;
+
+        if (self.tipoComodo == "comum"):
+            if (self.areaComodo > 6):
+                nTomadas = self.comodo.perimetro/5
+            self.info.append("O cômodo necessita {nTomadas} para se adequar a NBR")
+        
+        if (self.tipoComodo == "cozinha"):
+            nTomadas = self.comodo.perimetro/(3.5)
+            self.info.append("A cozinha necessita {nTomadas} para se adequar a NBR")
+        
+        if (self.tipoComodo == "banheiro"):
+            nTomadas = ""
+            
+
+
+
+
+
+        self.info.append()
+
 
     
 

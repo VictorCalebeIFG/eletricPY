@@ -8892,6 +8892,626 @@
                 "parede": "sim"
             },
             "parent": false
+        },
+        {
+            "elemetkey": "comodo_WLXPTBRTFK",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_JMETGWYPUI",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_CPDOUZEOHF",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_FYGFSMUMTL",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_TKDHDFBRKS",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_QLKGOVUALO",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_XFULWFYMJJ",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "lampada_QFAARAJYPW",
+            "Arguments": {
+                "id": "A",
+                "lamp_pos": "centro",
+                "raio": 57,
+                "pot": "100",
+                "circ": "1"
+            },
+            "parent": "comodo_XFULWFYMJJ"
+        },
+        {
+            "elemetkey": "tomada_media_elementJDIMXDMJVN",
+            "Arguments": {
+                "tipo": "media",
+                "lado": "direita",
+                "amount": 1,
+                "percent": 0.25,
+                "tail_size": 10,
+                "label": "",
+                "font_size": 8
+            },
+            "parent": "comodo_XFULWFYMJJ"
+        },
+        {
+            "elemetkey": "comodo_BFXGIQFWKM",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_SNLLULMPRN",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_VVGVCXJNNH",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_UVGPWECOQV",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_IGWWXFLETZ",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_YPCBDQTSQZ",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_BXAYUCBAEU",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_YFSHDSTSAG",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "esquerda",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "lampada_THJXZYPVXJ",
+            "Arguments": {
+                "id": "A",
+                "lamp_pos": "centro",
+                "raio": 34,
+                "pot": "100",
+                "circ": "1"
+            },
+            "parent": "comodo_YFSHDSTSAG"
+        },
+        {
+            "elemetkey": "comodo_IGLZXJPXJD",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_KIDERQHYMP",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ODIQEZIJAC",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "esquerda",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_HKFKUUIQMW",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_MNFEKGTYQS",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "2"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_PKWUTDVJOL",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "2"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ERYLYFUMTH",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "4",
+                "altura": "2"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_QAZMNZYSBR",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "4",
+                "altura": "2"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_UMEHRDCZWM",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ARXSJKJXIP",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_JXNOGZLEVP",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ASODNOMWKP",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_RSSKVGJYXB",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_AAYTZHPGRI",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_TSMQQONCAB",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ZSUFXPACGW",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "2",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_WTYZVQRYAF",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_HESRSZQBBM",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_LGKEPGAUUU",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_EFGOVIGBOH",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "lampada_XLOIVGXGFC",
+            "Arguments": {
+                "id": "",
+                "lamp_pos": "centro",
+                "raio": 52,
+                "pot": "",
+                "circ": ""
+            },
+            "parent": "comodo_EFGOVIGBOH"
+        },
+        {
+            "elemetkey": "tomada_media_elementLCJLEDYHTO",
+            "Arguments": {
+                "tipo": "media",
+                "lado": "direita",
+                "amount": 1,
+                "percent": 0.5,
+                "tail_size": 10,
+                "label": "",
+                "font_size": 8
+            },
+            "parent": "comodo_EFGOVIGBOH"
+        },
+        {
+            "elemetkey": "comodo_IBZKOTSWYE",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "lampada_RXNQEBKTFK",
+            "Arguments": {
+                "id": "",
+                "lamp_pos": "centro",
+                "raio": 50,
+                "pot": "",
+                "circ": ""
+            },
+            "parent": "comodo_IBZKOTSWYE"
+        },
+        {
+            "elemetkey": "tomada_media_elementQIBQJQTVEP",
+            "Arguments": {
+                "tipo": "media",
+                "lado": "direita",
+                "amount": 1,
+                "percent": 0.5,
+                "tail_size": 10,
+                "label": "",
+                "font_size": 8
+            },
+            "parent": "comodo_IBZKOTSWYE"
+        },
+        {
+            "elemetkey": "interruptor_s1_XIOTXHHBKG",
+            "Arguments": {
+                "tipo": "s1",
+                "wall": "direita",
+                "percent": 16,
+                "dis": 10,
+                "radius": 30,
+                "label1": "A",
+                "label2": "",
+                "label3": ""
+            },
+            "parent": "comodo_IBZKOTSWYE"
+        },
+        {
+            "elemetkey": "lampada_NNJDWUDZVI",
+            "Arguments": {
+                "id": "",
+                "lamp_pos": "centro",
+                "raio": 34,
+                "pot": "",
+                "circ": ""
+            },
+            "parent": "comodo_IBZKOTSWYE"
+        },
+        {
+            "elemetkey": "interruptor_s1_BOOWWPHTNQ",
+            "Arguments": {
+                "tipo": "s1",
+                "wall": "direita",
+                "percent": 17,
+                "dis": 10,
+                "radius": 30,
+                "label1": "",
+                "label2": "",
+                "label3": ""
+            },
+            "parent": "comodo_IBZKOTSWYE"
+        },
+        {
+            "elemetkey": "comodo_AGDRIJZHFW",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_EXTCJUTCAV",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_DPISKPDUEV",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "esquerda",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_DWYWEILLHP",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_CSTRUUJZNS",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_JPVYVIIWFU",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_HOXJVAXAFI",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_BBXLSAVKDD",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_RXPIXLSOOQ",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
         }
     ]
 }

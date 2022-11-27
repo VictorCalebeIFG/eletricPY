@@ -10,3 +10,4 @@ interr
 space
 door
 window
+info
