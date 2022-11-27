@@ -284,8 +284,8 @@ class new_window:
 class open_info:
     def __init__(self,pc = None, master = None) -> None:
         self.pop_w = tk.Toplevel(master)
-        self.pop_w.title("INFORMAÇÕES")
-        self.pop_w.geometry("370x250+550+200")
+        self.pop_w.title("INFORMAÇÕES NBR")
+        self.pop_w.geometry("450x250+550+200")
         self.pc = pc
         self.window = None
         self.info = []
@@ -296,39 +296,63 @@ class open_info:
 
         main_frame = tk.Frame(self.pop_w)
         frame = tk.Frame(main_frame)
-        info = ["Testando", "TESTANDO NOVAMENTE"]
-        create_tk_labels(frame, info)
+
+        self.criaInfo()
+        create_tk_labels(frame, self.info)
 
         print(self.pc.current_obj.area)
-        print(self.pc.current_obj.tipo)
+        print(self.pc.current_obj.perimetro)
 
         frame.grid(row=0,column=0,padx=20,pady=20)
         main_frame.pack(anchor=tk.CENTER,pady=10)
 
     def criaInfo(self):
-        self.qntdTUGs();
+        self.info.append(f"Área: {self.areaComodo}")
+        self.qntdTUGs()
+        self.potTUGs()
+        self.potLamp()
 
     def qntdTUGs(self):
         nTomadas = 1;
+        self.info.append("QUANTIDADE DE TUGs:")
 
         if (self.tipoComodo == "comum"):
             if (self.areaComodo > 6):
-                nTomadas = self.comodo.perimetro/5
-            self.info.append("O cômodo necessita {nTomadas} para se adequar a NBR")
+                nTomadas = int(self.comodo.perimetro/5)
+            self.info.append(f"O cômodo necessita {nTomadas} tomadas de uso geral para se adequar a NBR")
         
         if (self.tipoComodo == "cozinha"):
-            nTomadas = self.comodo.perimetro/(3.5)
-            self.info.append("A cozinha necessita {nTomadas} para se adequar a NBR")
+            nTomadas = int(self.comodo.perimetro/(3.5))
+            self.info.append(f"A cozinha necessita {nTomadas} tomadas de uso geral  para se adequar a NBR.")
         
         if (self.tipoComodo == "banheiro"):
-            nTomadas = ""
+            self.info.append("O banheiro necessita de ao menos uma tomada de uso geral, que deve estar a uma distância de 60 cm do box, para se adequar a NBR.")
             
+        if (self.tipoComodo == "subsolo"):
+            self.info.append("O subsolo/varanda/garagem necessário ao menos uma tomada para se adequar a NBR.")
+    
+    def potTUGs(self):
+        self.info.append("POTÊNCIA DAS TUGs:")
 
+        if (self.tipoComodo == "comum"):
+            self.info.append("É necessário 100 VA por tomada.")
+        
+        if (self.tipoComodo == "cozinha"):
+            self.info.append("É necessário 600 VA por tomada, até 3 tomadas. Atribuir 100 VA para as tomadas excedentes.")
+        
+        if (self.tipoComodo == "banheiro"):
+            self.info.append("É necessário 600 VA por tomada, até 3 tomadas. Atribuir 100 VA para as tomadas excedentes.")
+            
+        if (self.tipoComodo == "subsolo"):
+            self.info.append("É necessário 100 VA por tomada.")
+    
+    def potLamp(self):
+        potMinima = 100
+        self.info.append("POTÊNCIA MÍNIMA DE ILUMINAÇÃO:")
 
-
-
-
-        self.info.append()
+        if (self.areaComodo > 6):
+            potMinima = 100 + 60*int((self.areaComodo-6)/4)
+        self.info.append(f"A potência mínima de iluminação pro cômodo é {potMinima} VA.")
 
 
     

@@ -16,6 +16,9 @@ class Square_comodo_in_dim:
         self.pc = pc
         self.tipo = tipo
 
+        #VAI GUARDAR UM VETOR NO FORMATO [objetoComodoPai, tamanhoDaParedeQueFazContatoComPai, tamanhoParedeQueNaoFazContatoComPai]
+        self.relacaoComodoPai = None;
+
         if e != None:
             eL = e ; eR = e ; eT = e ; eB = e
         
@@ -95,8 +98,14 @@ class Square_comodo_in_dim:
                                         s_x = self.F[0],s_y = self.F[1],canvas = self.canvas,scale=self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
+                #ARRUMA ÁREA E PERÍMETRO DOS CÔMODOS
+                self.area = self.area + int(comodo.area) + (eT*horizotal_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.t_dim, comodo.l_dim]
 
-            self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+
 
             return comodo
         elif point == 'G':
@@ -104,8 +113,13 @@ class Square_comodo_in_dim:
                                         s_x = self.F[0] + (self.bottom_dim - horizotal_dim),s_y = self.F[1],canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
+                self.area = self.area + int(comodo.area) + (eT*horizotal_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.t_dim, comodo.l_dim]
 
-            self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+
             return comodo
     
     def add_top(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'B',e = None, parede = False, tipo = "comum"):
@@ -119,8 +133,12 @@ class Square_comodo_in_dim:
                                         s_x = self.B[0],s_y = self.B[1]-vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
+                self.area = self.area + int(comodo.area) + (eB*horizotal_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.d_dim, comodo.l_dim]
 
-            self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
 
             return comodo
         elif point == 'C':
@@ -128,8 +146,13 @@ class Square_comodo_in_dim:
                                         s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
+                self.area = self.area + int(comodo.area) + (eB*horizotal_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.d_dim, comodo.l_dim]
 
-            self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+            
             return comodo
         
 
@@ -144,8 +167,12 @@ class Square_comodo_in_dim:
             
             if (not parede):
                 BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
+                self.area = self.area + int(comodo.area) + (eL*vertical_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.l_dim, comodo.t_dim]
 
-            self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
 
             return comodo
         elif point == 'H':
@@ -153,8 +180,13 @@ class Square_comodo_in_dim:
                                         s_x = self.D[0] ,s_y = self.D[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
+                self.area = self.area + int(comodo.area) + (eL*vertical_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.l_dim, comodo.t_dim]
 
-            self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+
             
             return comodo
     
@@ -169,15 +201,26 @@ class Square_comodo_in_dim:
                                         s_x = self.A[0] - horizotal_dim, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
-            self.area = self.area + comodo.area + (eR*vertical_dim)
+                self.area = self.area + comodo.area + (eR*vertical_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.r_dim, comodo.t_dim]
+
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+            
             return comodo
         elif point == 'A':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.A[0] - horizotal_dim,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
+                self.area = self.area + comodo.area + (eR*vertical_dim)/(self.scale**2)
+                comodo.area = self.area
+                comodo.relacaoComodoPai = [self, comodo.r_dim, comodo.t_dim]
 
-            self.area = self.area + comodo.area + (eR*vertical_dim)
+                self.perimetro = self.perimetro + comodo.perimetro - comodo.relacaoComodoPai[1]*2/self.scale  + eT*2/self.scale
+                comodo.perimetro = self.perimetro
+            
             return comodo
     
     
@@ -351,12 +394,25 @@ class Square_comodo_in_dim:
         OU SEJA SÓ FUNCIONA CASO O STATE SEJA ->erase<-'''
 
         if self.pc.state == 'erase':
+            """AO DELETAR CÔMODO ANEXADO RETORNA A ÁREA DO PAI PRA ANTERIOR"""
+            if(self.pc.current_obj.relacaoComodoPai != None):
+                comodoPai = self.pc.current_obj.relacaoComodoPai[0]
+                comodoFilho = self.pc.current_obj
+                comodoPai.area = comodoPai.area - (comodoFilho.r_dim/comodoFilho.scale) * (comodoFilho.t_dim/comodoFilho.scale) - (comodoFilho.eL*comodoFilho.relacaoComodoPai[1])/(self.scale**2)
+
+                comodoPai.perimetro = comodoPai.perimetro  - comodoFilho.relacaoComodoPai[2]*2/comodoFilho.scale - comodoFilho.eT*2/self.scale
+
             [self.pc.draw_canvas.delete(id) for id in self.delete_list]
         pass
 
     def die(self):
         '''DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
         ESTADO ->ereas<-'''
-        
+        if(self.relacaoComodoPai != None):
+            comodoPai = self.relacaoComodoPai[0]
+            comodoFilho = self
+            comodoPai.area = comodoPai.area - (comodoFilho.r_dim/comodoFilho.scale) * (comodoFilho.t_dim/comodoFilho.scale) - (comodoFilho.eL*comodoFilho.relacaoComodoPai[1])/(self.scale**2)
+
+            comodoPai.perimetro = comodoPai.perimetro - comodoFilho.relacaoComodoPai[2]*2/comodoFilho.scale - comodoFilho.eT*2/self.scale
         for id in self.delete_list:
             self.canvas.delete(id)
