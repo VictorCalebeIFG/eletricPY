@@ -49,6 +49,8 @@ class ProjectCanvas:
         self.canvas_functions = []    #Funções que são chamadas ao clicar com o esquerdo no CANVAS
         self.change_state_functions = []   #Funções que são chamadas ao clicar com o esquerdo nos botões
         self.popup_objects = {}
+        self.last_lamp = None
+        self.last_inter = None
 
         self.change_state_functions.append(self.do_nothing)
         self.canvas_functions.append(self.do_nothing)

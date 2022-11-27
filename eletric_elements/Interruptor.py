@@ -44,6 +44,12 @@ class Interruptor_s1:
 
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
+        
+        if self.pc.state == 'condu':
+            self.pc.last_inter = self.id_list
+            if self.pc :
+                self.pc.conect_p.append(self.center)
+                self.pc.conect_n += 1
 
     def die(self):
         ''' DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
@@ -103,6 +109,12 @@ class Interruptor_s2:
 
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
+        
+        if self.pc.state == 'condu':
+            self.pc.last_inter = self.id_list
+            if self.pc :
+                self.pc.conect_p.append(self.center)
+                self.pc.conect_n += 1
     
     def die(self):
         ''' DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
@@ -175,6 +187,12 @@ class Interruptor_s3:
 
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
+        
+        if self.pc.state == 'condu':
+            self.pc.last_inter = self.id_list
+            if self.pc :
+                self.pc.conect_p.append(self.center)
+                self.pc.conect_n += 1
     
     def die(self):
         ''' DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
@@ -224,6 +242,12 @@ class Interruptor_3way:
 
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
+        
+        if self.pc.state == 'condu':
+            self.pc.last_inter = self.id_list
+            if self.pc :
+                self.pc.conect_p.append(self.center)
+                self.pc.conect_n += 1
     
     def die(self):
         [self.pc.draw_canvas.delete(id) for id in self.id_list]
@@ -278,6 +302,12 @@ class Interruptor_4way:
 
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
+        
+        if self.pc.state == 'condu':
+            self.pc.last_inter = self.id_list
+            if self.pc :
+                self.pc.conect_p.append(self.center)
+                self.pc.conect_n += 1
     
     def die(self):
         ''' DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO

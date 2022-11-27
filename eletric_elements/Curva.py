@@ -4,12 +4,6 @@ from numpy import linspace
 from eletric_elements.Element import Element
 from util_.util import draw_text,get_mid_p
 
-#root = tk.Tk()
-
-
-#canvas = tk.Canvas(root,width=1300,height=700, background='white')
-#canvas.pack()
-
 def draw_curve(A,B,curve = 100, smoth = 50,orientation = 0):
     points = []
     for ang in linspace(0,-180,smoth).tolist():
@@ -38,13 +32,16 @@ class Condutor(Element):
         self.smoth = smoth
 
         self.points = draw_curve(A,B,curve=curve,smoth=smoth,orientation=orientation)
-        self.create_line(self.points)
+        id = self.canvas.create_line(self.points) ; self.id_list.append(id)
 
         if A[0]>B[0]: self.p1 = B ; self.p2 = A
         else: self.p1=A ; self.p2 = B
 
+        self.bind_all()
+        self.hide_condu()
+
     def set_arm(self,index = None,arm_size = 30,hand_size = 50,base_angle = None):
-        print("Update ?")
+        #print("Update ?")
         if index == None:
             index = int(self.smoth/2)
         if base_angle == None:
@@ -54,20 +51,20 @@ class Condutor(Element):
                 base_angle = 135
         
         arm = get_radius_point(self.points[index],radius=arm_size,angle=base_angle) 
-        self.id_list.append(self.canvas.create_line(self.points[index],arm))
+        id = self.canvas.create_line(self.points[index],arm) ; self.id_list.append(id)
 
         if int(arm[0]) >= int(self.points[index][0]):
-            self.id_list.append(self.canvas.create_line(arm,(arm[0]+hand_size,arm[1])))
+            id = self.canvas.create_line(arm,(arm[0]+hand_size,arm[1])); self.id_list.append(id)
             self.armP1 = arm
             self.armP2 = (arm[0]+hand_size,arm[1])
             self.hand_points = linspace(self.armP1,self.armP2,hand_size)
-            print('1')
+            #print('1')
         else:
-            self.id_list.append(self.canvas.create_line(arm,(arm[0]-hand_size,arm[1])))
+            id = self.canvas.create_line(arm,(arm[0]-hand_size,arm[1])) ; self.id_list.append(id)
             self.armP1 = arm
             self.armP2 = (arm[0]-hand_size,arm[1])
             self.hand_points = linspace(self.armP1,self.armP2,hand_size)
-            print(2)
+            #print(2)
         
         
 
@@ -177,8 +174,13 @@ class Condutor(Element):
         ''' DELETA O DESENHO DO CANVAS SEM NECESSARIAMENTE ESTAR NO
             ESTADO ->ereas<-'''
         [self.pc.draw_canvas.delete(id) for id in self.id_list]
-
-#cond = Condutor(canvas=canvas,A = A,B = B,orientation=1)
-#cond.set_arm(base_angle=45)
-
-#root.mainloop()
+    
+    def hide_condu(self):
+        try:
+            for id in self.pc.last_lamp:
+                self.canvas.tag_raise(id)
+        except:None
+        try:
+            for id in self.pc.last_inter:
+                self.canvas.tag_raise(id)
+        except: None

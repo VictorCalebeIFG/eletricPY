@@ -57,14 +57,17 @@ class Lampada:
         '''MATA O DESENHO CASO ALGUÉM CLIQUE NELE COM A BORRACHA.
         OU SEJA SÓ FUNCIONA CASO O STATE SEJA ->erase<-'''
 
+        self.pc.last_lamp = self.id_list
+
         if self.pc.state == 'erase':
             [self.pc.draw_canvas.delete(id) for id in self.id_list]
         
         if self.pc.state == 'condu':
+            #self.canvas.tag_raise(self.id)
+            
             if self.pc :
                 self.pc.conect_p.append(self.centro)
                 self.pc.conect_n += 1
-
 
     def die(self):
         [self.pc.draw_canvas.delete(id) for id in self.id_list]
