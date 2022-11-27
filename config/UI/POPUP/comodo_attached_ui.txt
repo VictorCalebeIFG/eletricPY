@@ -6,7 +6,7 @@
 
 #DROP DOWN WIDGET:
 #LABEL-dropdown-VARNAME-COMMAND-/LIST
-
+Tipo:           -dropdown-tipo-update-/comum-comum-cozinha-banheiro-subsolo
 Lado:           -dropdown-lado-update-/direita-direita-esquerda-cima-baixo
 Largura:        -entry-largura--/
 Altura:         -entry-altura--/

@@ -58,7 +58,7 @@ class new_comodo:
         if self.room: self.room.die()
         UI_backend.e = float(self.esp.get()) ; UI_backend.horizontal_dim = float(self.largura.get())
         UI_backend.vertical_dim = float(self.altura.get()) ;UI_backend.x = float(self.pos[0]) 
-        UI_backend.y = float(self.pos[1])
+        UI_backend.y = float(self.pos[1]); UI_backend.tipo = self.tipo.get()
         self.room = UI_backend.create_comodo(canvas=self.pc.draw_canvas,pc = self.pc)
 
 class new_attached_room:
@@ -103,15 +103,16 @@ class new_attached_room:
 
         UI_backend.horizontal_dim = float(self.largura.get())
         UI_backend.vertical_dim = float(self.altura.get())
+        UI_backend.tipo = self.tipo.get()
         
         if self.room: self.room.die()
-        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get())
+        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get(), tipo = self.tipo.get())
 
     def update(self,var):
         if self.room: self.room.die()
         UI_backend.horizontal_dim = float(self.largura.get())
         UI_backend.vertical_dim = float(self.altura.get())
-        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get())
+        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get(), tipo = self.tipo.get())
 
 
 class new_lamp(popup_ui):

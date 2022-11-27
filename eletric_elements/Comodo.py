@@ -85,14 +85,14 @@ class Square_comodo_in_dim:
         self.canvas.tag_bind(self.border,"<Button-1>",self.clicked)
         pass
        
-    def add_bottom(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'F',e = None, parede = False):
+    def add_bottom(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'F',e = None, parede = False, tipo = "comum"):
         
         if e != None:
             eL = e ; eR = e ; eT = e ; eB = e
 
         if point == 'F':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.F[0],s_y = self.F[1],canvas = self.canvas,scale=self.scale, pc= self.pc)
+                                        s_x = self.F[0],s_y = self.F[1],canvas = self.canvas,scale=self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
 
@@ -101,14 +101,14 @@ class Square_comodo_in_dim:
             return comodo
         elif point == 'G':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.F[0] + (self.bottom_dim - horizotal_dim),s_y = self.F[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.F[0] + (self.bottom_dim - horizotal_dim),s_y = self.F[1],canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
             return comodo
     
-    def add_top(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'B',e = None, parede = False):
+    def add_top(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'B',e = None, parede = False, tipo = "comum"):
 
         if e != None:
             eL = e ; eR = e ; eT = e ; eB = e
@@ -116,7 +116,7 @@ class Square_comodo_in_dim:
         if point == 'B':
             #self.B[1]-vertical_dim + e/10 => sei lá pq + e/10
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.B[0],s_y = self.B[1]-vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.B[0],s_y = self.B[1]-vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
 
@@ -125,7 +125,7 @@ class Square_comodo_in_dim:
             return comodo
         elif point == 'C':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
 
@@ -133,14 +133,14 @@ class Square_comodo_in_dim:
             return comodo
         
 
-    def add_right(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'D',e = None, parede = False):
+    def add_right(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'D',e = None, parede = False, tipo = "comum"):
 
         if e != None:
             eL = e ; eR = e ; eT = e ; eB = e
 
         if point == 'D':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.D[0],s_y = self.D[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.D[0],s_y = self.D[1],canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             
             if (not parede):
                 BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
@@ -150,7 +150,7 @@ class Square_comodo_in_dim:
             return comodo
         elif point == 'H':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.D[0] ,s_y = self.D[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.D[0] ,s_y = self.D[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
 
@@ -158,7 +158,7 @@ class Square_comodo_in_dim:
             
             return comodo
     
-    def add_left(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'A', e = None, parede = False):
+    def add_left(self,eL = 0,eR = 0,eT = 0,eB = 0 ,horizotal_dim = 0 ,vertical_dim = 0,point = 'A', e = None, parede = False, tipo = "comum"):
 
         if e != None:
             eL = e ; eR = e ; eT = e ; eB = e
@@ -166,14 +166,14 @@ class Square_comodo_in_dim:
         if point == 'E':
             #Encaixa o ponto tr_inp do novo comodo no ponto A do comodo atual.
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.A[0] - horizotal_dim + e/10, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.A[0] - horizotal_dim, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
             self.area = self.area + comodo.area + (eR*vertical_dim)
             return comodo
         elif point == 'A':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
-                                        s_x = self.A[0] - horizotal_dim + 1 + e/10,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
+                                        s_x = self.A[0] - horizotal_dim,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc, tipo = tipo)
             if (not parede):
                 BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
 

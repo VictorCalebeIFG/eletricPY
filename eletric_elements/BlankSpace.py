@@ -33,7 +33,7 @@ class Space:
             if dist2>=comodo.r_dim:
                 dist2 = comodo.r_dim
             
-            id = self.canvas.create_rectangle(x1,y1+dist1+1,x2,y2-dist2,fill=config['fill'],outline = config['outline'],width = 0)
+            id = self.canvas.create_rectangle(x1,y1+dist1+1,x2+1,y2-dist2,fill=config['fill'],outline = config['outline'],width = 0)
             self.id_list.append(id)
             comodo.delete_list.append(id)
         

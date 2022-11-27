@@ -24,6 +24,8 @@ eB  = None
 horizontal_dim = None
 vertical_dim = None
 
+tipo = None
+
 # Ponto inicial do comodo
 x = None
 y = None
@@ -36,7 +38,7 @@ current_project = 'Saving/projeto_1.json'
 
 def create_comodo(canvas,pc):
     comodo = sqr_com(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale,
-                        s_x = x, s_y = y, canvas=canvas,scale=scale,pc=pc)
+                        s_x = x, s_y = y, canvas=canvas,scale=scale,pc=pc, tipo= tipo)
 
 
     args = get_widgets_values(pc.popup.__dict__)
@@ -45,7 +47,7 @@ def create_comodo(canvas,pc):
     
     return comodo
 
-def create_attached_room(canvas, pc, lado, referencia, parede):
+def create_attached_room(canvas, pc, lado, referencia, parede, tipo):
     paredes = {
         "sim": True,
         "nao": False
@@ -56,25 +58,25 @@ def create_attached_room(canvas, pc, lado, referencia, parede):
         "esquerda": "F",
         "direita": "G"
         }
-        comodo = pc.current_obj.add_bottom(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+        comodo = pc.current_obj.add_bottom(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede), tipo = tipo)
     if (lado == "cima"):
         orientacoes = {
         "esquerda": "B",
         "direita": "C"
         }    
-        comodo = pc.current_obj.add_top(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+        comodo = pc.current_obj.add_top(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede), tipo = tipo)
     if (lado == "direita"):
         orientacoes = {
         "esquerda": "D",
         "direita": "H"
         }    
-        comodo = pc.current_obj.add_right(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+        comodo = pc.current_obj.add_right(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede), tipo = tipo)
     if (lado == "esquerda"):
         orientacoes = {
         "esquerda": "A",
         "direita": "E"
         }    
-        comodo = pc.current_obj.add_left(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede))
+        comodo = pc.current_obj.add_left(e=e*scale,horizotal_dim = horizontal_dim*scale, vertical_dim = vertical_dim*scale, point = orientacoes.get(referencia), parede = paredes.get(parede), tipo = tipo)
 
 
     args = get_widgets_values(pc.popup.__dict__)
