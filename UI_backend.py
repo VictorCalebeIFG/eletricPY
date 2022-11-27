@@ -115,13 +115,13 @@ def create_tom(pc):
     args['percent'] = args['percent']/100
     args['font_size'] = 8
 
-    if lado == 'right':
+    if lado == 'direita':
         tomada = pc.current_obj.add_right_tug(tipo,**args)
-    if lado == 'left':
+    if lado == 'esquerda':
         tomada = pc.current_obj.add_left_tug(tipo,**args)
-    if lado == 'top':
+    if lado == 'cima':
         tomada = pc.current_obj.add_top_tug(tipo,**args)
-    if lado == 'botton':
+    if lado == 'baixo':
         tomada = pc.current_obj.add_botton_tug(tipo,**args)
     
     pc.popup_objects[pc.popup.id] = tomada

@@ -230,22 +230,22 @@ class Square_comodo_in_dim:
         return fonte
 
     def add_interruptor(self,wall = 'top',inter = "s1",shift = 5, percent = 0.5,radius = 10,label1='a',label2= 'b',label3= 'c',pc = None):
-        if wall =='right':
+        if wall =='direita':
             t_p = percent_line(self.tr_inp,self.br_inp,percent)
             center = (t_p[0]-radius - shift,t_p[1])
             if percent>=0.5: angle = 135
             else: angle = -135
-        if wall == 'left':
+        if wall == 'esquerda':
             t_p = percent_line(self.tl_inp,self.bl_inp,percent)
             center = (t_p[0] + radius + shift,t_p[1])
             if percent<=0.5: angle = -45
             else: angle = 45
-        if wall == 'top':
+        if wall == 'cima':
             t_p = percent_line(self.tl_inp,self.tr_inp,percent)
             center = (t_p[0],t_p[1] + radius + shift)
             if percent>=0.5: angle = 45
             else: angle = 135
-        if wall == 'bottom':
+        if wall == 'baixo':
             t_p = percent_line(self.bl_inp,self.br_inp,percent)
             center = (t_p[0],t_p[1] - radius - shift)
             if percent<=0.5: angle = -135

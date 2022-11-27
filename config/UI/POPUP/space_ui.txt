@@ -7,6 +7,6 @@
 #DROP DOWN WIDGET:
 #LABEL-dropdown-VARNAME-/LIST
 
-Parede:         -dropdown-lado-update-/right-right-left-top-botton
+Parede:         -dropdown-lado-update-/direita-direita-esquerda-cima-baixo
 Distância1:     -entry-dis1--/
 Distância2:     -entry-dis2--/

@@ -11,7 +11,7 @@ class Space:
         self.codekey = generate_key('space_')
 
 
-        if wall=='left':
+        if wall=='esquerda':
             x1,y1 = comodo.tl_inp
             x2,y2 = comodo.E
 
@@ -24,7 +24,7 @@ class Space:
             self.id_list.append(id)
             comodo.delete_list.append(id)
 
-        if wall=='right':
+        if wall=='direita':
             x1,y1 = comodo.tr_inp
             x2,y2 = comodo.H
 
@@ -37,7 +37,7 @@ class Space:
             self.id_list.append(id)
             comodo.delete_list.append(id)
         
-        if wall=='top':
+        if wall=='cima':
             x1,y1 = comodo.B
             x2,y2 = comodo.tr_inp
 
@@ -50,7 +50,7 @@ class Space:
             self.id_list.append(id)
             comodo.delete_list.append(id)
 
-        if wall=='botton':
+        if wall=='baixo':
             x1,y1 = comodo.bl_inp
             x2,y2 = comodo.G
             

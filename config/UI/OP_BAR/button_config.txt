@@ -2,16 +2,16 @@
 # A primeira string é o nome do estado(ou icone)
 # A segunda é texto que fica abaixo do botão.
 
-newp-NEW PROJECT
-saving-SAVE
-load-LOAD
-erase-ERASE
-room-ADD ROOM
-window-ADD WINDOW
-door-ADD DOOR
-space-ADD SPACE
-lamp-ADD LAMP
-tom-ADD TUG
-interr-ADD INTERRUP
-condu-ADD CONECTION
+newp-NOVO PROJETO
+saving-SALVAR
+load-CARREGAR
+erase-APAGAR
+room-CÔMODO
+window-JANELA
+door-PORTA
+space-ESPAÇO
+lamp-LÂMPADA
+tom-TOMADA
+interr-INTERRUPTOR
+condu-CONDUTOR
 info-INFORMAÇÕES

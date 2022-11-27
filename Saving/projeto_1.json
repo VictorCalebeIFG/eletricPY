@@ -4540,6 +4540,163 @@
                 "parede": "nao"
             },
             "parent": false
+        },
+        {
+            "elemetkey": "comodo_HVAUZKNGPW",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_LIAZOQYKMC",
+            "Arguments": {
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_DGQHOPJNGU",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "space_CHIZSSNHSZ",
+            "Arguments": {
+                "lado": "top",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_DGQHOPJNGU"
+        },
+        {
+            "elemetkey": "space_GQRGOXDAFP",
+            "Arguments": {
+                "lado": "top",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_DGQHOPJNGU"
+        },
+        {
+            "elemetkey": "comodo_ZUPRREBZQQ",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "space_CPEMAJQRXU",
+            "Arguments": {
+                "lado": "baixo",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_ZUPRREBZQQ"
+        },
+        {
+            "elemetkey": "comodo_PDWBHUENSK",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "lampada_RCLZBDMYGR",
+            "Arguments": {
+                "id": "",
+                "lamp_pos": "centro",
+                "raio": 105,
+                "pot": "",
+                "circ": ""
+            },
+            "parent": "comodo_PDWBHUENSK"
+        },
+        {
+            "elemetkey": "tomada_media_elementBYDOUADTGY",
+            "Arguments": {
+                "tipo": "media",
+                "lado": "right",
+                "amount": 1,
+                "percent": 0.5,
+                "tail_size": 10,
+                "label": "",
+                "font_size": 8
+            },
+            "parent": "comodo_PDWBHUENSK"
+        },
+        {
+            "elemetkey": "interruptor_s1_ZRRXHOZKCD",
+            "Arguments": {
+                "tipo": "s1",
+                "wall": "right",
+                "percent": 50,
+                "dis": 10,
+                "radius": 30,
+                "label1": "",
+                "label2": "",
+                "label3": ""
+            },
+            "parent": "comodo_PDWBHUENSK"
+        },
+        {
+            "elemetkey": "comodo_JAXZVIVQTQ",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_SUBVHKWXWX",
+            "Arguments": {
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3"
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "tomada_media_elementFHQGPMYGII",
+            "Arguments": {
+                "tipo": "media",
+                "lado": "baixo",
+                "amount": 1,
+                "percent": 0.5,
+                "tail_size": 10,
+                "label": "",
+                "font_size": 8
+            },
+            "parent": "comodo_SUBVHKWXWX"
+        },
+        {
+            "elemetkey": "interruptor_s1_ZKOEEQQTFK",
+            "Arguments": {
+                "tipo": "s1",
+                "wall": "baixo",
+                "percent": 67,
+                "dis": 2,
+                "radius": 14,
+                "label1": "",
+                "label2": "",
+                "label3": ""
+            },
+            "parent": "comodo_SUBVHKWXWX"
         }
     ]
 }
