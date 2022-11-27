@@ -64,7 +64,6 @@ class Space:
             self.id_list.append(id)
             comodo.delete_list.append(id)
 
-        self.id_list.append(id)
         
         '''BIND NO OBJETO PRA QUANDO ALGUÉM CLICAR NELE COM A BORRACHA'''
         if self.pc :

@@ -94,7 +94,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.F[0],s_y = self.F[1],canvas = self.canvas,scale=self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("top", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
 
@@ -103,7 +103,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.F[0] + (self.bottom_dim - horizotal_dim),s_y = self.F[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("top", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("cima", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eT*horizotal_dim)/(self.scale**2)
             return comodo
@@ -118,7 +118,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.B[0],s_y = self.B[1]-vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("botton", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
 
@@ -127,7 +127,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.B[0] + (self.bottom_dim - horizotal_dim),s_y = self.B[1] - vertical_dim + e/10,canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("botton", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("baixo", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eB*horizotal_dim)/(self.scale**2)
             return comodo
@@ -143,7 +143,7 @@ class Square_comodo_in_dim:
                                         s_x = self.D[0],s_y = self.D[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             
             if (not parede):
-                BlankSpace.Space("left", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
 
@@ -152,7 +152,7 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.D[0] ,s_y = self.D[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("left", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("esquerda", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eL*vertical_dim)/(self.scale**2)
             
@@ -168,14 +168,14 @@ class Square_comodo_in_dim:
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.A[0] - horizotal_dim + e/10, s_y = self.A[1],canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("right", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
             self.area = self.area + comodo.area + (eR*vertical_dim)
             return comodo
         elif point == 'A':
             comodo = Square_comodo_in_dim(eL,eR,eT,eB,horizotal_dim,vertical_dim,
                                         s_x = self.A[0] - horizotal_dim + 1 + e/10,s_y = self.A[1]+ (self.left_dim - vertical_dim),canvas = self.canvas,scale = self.scale, pc= self.pc)
             if (not parede):
-                BlankSpace.Space("right", comodo, 0, 0, comodo.pc)
+                BlankSpace.Space("direita", comodo, 0, 0, comodo.pc)
 
             self.area = self.area + comodo.area + (eR*vertical_dim)
             return comodo

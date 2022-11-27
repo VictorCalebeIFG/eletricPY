@@ -15,6 +15,7 @@ class new_comodo:
         self.pc = pc
         self.pc.popup = self
         self.id = generate_key('popup')
+        self.room = None
 
 
         main_frame = tk.Frame(self.pop_w)
@@ -37,6 +38,9 @@ class new_comodo:
 
         createB = ttk.Button(self.pop_w,text='create',command=self.create_comodo)
         createB.pack()
+
+        
+        self.pop_w.bind_all('<Key>',self.update)
         pass
     
     def create_comodo(self,delete = True):
@@ -48,10 +52,14 @@ class new_comodo:
         UI_backend.vertical_dim = float(self.altura.get()) ; UI_backend.x = float(self.pos[0]) 
         UI_backend.y = float(self.pos[1])
         
-        UI_backend.create_comodo(canvas=self.pc.draw_canvas,pc = self.pc)
+        self.room = UI_backend.create_comodo(canvas=self.pc.draw_canvas,pc = self.pc)
     
     def update(self,var):
-        None
+        if self.room: self.room.die()
+        UI_backend.e = float(self.esp.get()) ; UI_backend.horizontal_dim = float(self.largura.get())
+        UI_backend.vertical_dim = float(self.altura.get()) ;UI_backend.x = float(self.pos[0]) 
+        UI_backend.y = float(self.pos[1])
+        self.room = UI_backend.create_comodo(canvas=self.pc.draw_canvas,pc = self.pc)
 
 class new_attached_room:
     def __init__(self,pc,master,pos = None) -> None:
@@ -62,6 +70,7 @@ class new_attached_room:
         self.pc = pc
         self.pc.popup = self
         self.id = generate_key('popup')
+        self.room = None
 
 
         main_frame = tk.Frame(self.pop_w)
@@ -83,6 +92,8 @@ class new_attached_room:
 
         createB = ttk.Button(self.pop_w,text='create',command=self.create_attached_room)
         createB.pack()
+
+        self.pop_w.bind_all('<Key>',self.update)
         pass
     
     def create_attached_room(self,delete = True):
@@ -93,10 +104,15 @@ class new_attached_room:
         UI_backend.horizontal_dim = float(self.largura.get())
         UI_backend.vertical_dim = float(self.altura.get())
         
+        if self.room: self.room.die()
         self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get())
 
     def update(self,var):
-        None
+        if self.room: self.room.die()
+        UI_backend.horizontal_dim = float(self.largura.get())
+        UI_backend.vertical_dim = float(self.altura.get())
+        self.room = UI_backend.create_attached_room(canvas=self.pc.draw_canvas,pc = self.pc, lado = self.lado.get(), referencia = self.referencia.get(), parede = self.parede.get())
+
 
 class new_lamp(popup_ui):
     def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='550', topdis='200') -> None:
