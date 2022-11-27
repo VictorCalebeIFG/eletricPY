@@ -13,5 +13,6 @@ space-ESPAÇO
 lamp-LÂMPADA
 tom-TOMADA
 interr-INTERRUPTOR
-condu-CONDUTOR
+condu-ELETRODUTO
+condutor-CONDUTOR
 info-INFORMAÇÕES
