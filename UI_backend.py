@@ -42,8 +42,12 @@ def create_comodo(canvas,pc):
 
 
     args = get_widgets_values(pc.popup.__dict__)
+    args['s_x'] = x ; args['s_y'] = y
 
-    save(comodo.codekey,args,False,filename = current_project)
+    print(pc.popup.last)
+
+    if pc.popup.last == True:
+        save(comodo.codekey,args,False,filename = current_project)
     
     return comodo
 
@@ -81,7 +85,10 @@ def create_attached_room(canvas, pc, lado, referencia, parede, tipo):
 
     args = get_widgets_values(pc.popup.__dict__)
 
-    save(comodo.codekey,args,False,filename = current_project)
+    print(pc.popup.last)
+    if pc.popup.last == True:
+        save('attached_'+comodo.codekey,args,pc.current_obj.codekey,filename = current_project)
+
     
     return comodo
 

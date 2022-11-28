@@ -1,11 +1,11 @@
 import math
 from random import random
 from eletric_elements import BlankSpace
-from util_.util import percent_line,shift_points,open_config,generate_key
+from util_.util import percent_line,shift_points,open_config,generate_key,save
 from eletric_elements.Interruptor import Interruptor_s1,Interruptor_s2,Interruptor_s3,Interruptor_3way,Interruptor_4way
 from eletric_elements.Lampada import Lampada
 import UI_Interface.UI_insert as UI_insert_
-
+import UI_backend
 class Square_comodo_in_dim:
     def __init__(self,eL = 0 ,eR = 0,eT = 0,eB = 0,horizotal_dim = 0,vertical_dim = 0 ,s_x = 0 ,s_y = 0 ,canvas = None,e = None,scale = 0,pc = None,tipo = None) -> None:
 
@@ -342,7 +342,8 @@ class Square_comodo_in_dim:
     def clicked(self,event):
         if self.pc : self.pc.current_obj = self
         if self.pc.state == "erase":
-            self.explode(self);
+            self.explode(self)
+            save(self.name,'Delete','Delete',filename=UI_backend.current_project)
         for st in open_config('on_comodo_state_generate_ui'):
             if self.pc.state == st.split('-')[0]:
                 self.pc.set_state('normal')
