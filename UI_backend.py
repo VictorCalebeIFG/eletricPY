@@ -207,8 +207,8 @@ def create_space(pc):
     space = Space(
                     comodo=comodo,
                     wall= popdict['lado'],
-                    dist1 = float(popdict['dis1']),
-                    dist2 = float(popdict['dis2']),
+                    dist1 = float(popdict['dis1'])*scale,
+                    dist2 = float(popdict['dis2'])*scale,
                     pc=pc)
 
     
