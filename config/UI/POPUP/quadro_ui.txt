@@ -1,0 +1,12 @@
+#ENTRY WIDGET:
+#LABEL-entry-VARNAME--/
+
+#SCALE WIDGET:
+#LABEL-scale-VARNAME-COMMAND-/FROM-TO
+
+#DROP DOWN WIDGET:
+#LABEL-dropdown-VARNAME-COMMAND-/LIST
+
+Parede:                 -dropdown-wall-update-/direita-direita-esquerda-cima-baixo
+Posição:                -scale-percent-update-/0-100
+Tamanho:                -scale-tamanho-update-/20-50

@@ -8,7 +8,7 @@
 #LABEL-dropdown-VARNAME-COMMAND-/LIST
 
 Posição:    -dropdown-lamp_pos-update-/centro-centro
-Tamanho:    -scale-raio-update-/5-200
+Tamanho:    -scale-raio-update-/5-50-200
 Potência:   -entry-pot--/
 Circuito:   -entry-circ--/
 Comando:    -entry-id--/

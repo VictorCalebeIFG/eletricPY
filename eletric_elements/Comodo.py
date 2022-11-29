@@ -1,6 +1,7 @@
 import math
 from random import random
 from eletric_elements import BlankSpace
+from eletric_elements.Quadro import Quadro
 from util_.util import percent_line,shift_points,open_config,generate_key,save
 from eletric_elements.Interruptor import Interruptor_s1,Interruptor_s2,Interruptor_s3,Interruptor_3way,Interruptor_4way
 from eletric_elements.Lampada import Lampada
@@ -315,6 +316,27 @@ class Square_comodo_in_dim:
         self.delete_list = self.delete_list+int.id_list
             
         return int
+
+    def add_quadro(self, wall = 'top', percent = 0.5, size = 10, pc = None):
+        if wall =='direita':
+            t_p = percent_line(self.tr_inp,(self.br_inp[0], self.br_inp[1] - size),percent)
+            center = (t_p[0],t_p[1])
+        if wall == 'esquerda':
+            t_p = percent_line(self.tl_inp, (self.bl_inp[0], self.bl_inp[1] - size),percent)
+            center = (t_p[0],t_p[1])
+        if wall == 'cima':
+            t_p = percent_line(self.tl_inp,(self.tr_inp[0] - size, self.tr_inp[1]),percent)
+            center = (t_p[0],t_p[1])
+        if wall == 'baixo':
+            t_p = percent_line(self.bl_inp,(self.br_inp[0] - size, self.br_inp[1]),percent)
+            center = (t_p[0],t_p[1])
+        
+        
+        quadro = Quadro(self.canvas, center, size, wall, pc = self.pc)
+
+        self.delete_list = self.delete_list+quadro.id_list
+            
+        return quadro
     
     def add_lamp(self,centro = None,raio=20,pot = "100",id = "a",circ = "1",pc = None,**kwargs):
         if centro == None: centro = self.center

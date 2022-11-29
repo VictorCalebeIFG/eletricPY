@@ -10,4 +10,5 @@ interr
 space
 door
 window
+quadro
 info

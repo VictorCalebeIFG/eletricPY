@@ -13,3 +13,4 @@ space-new_space
 door-new_door
 window-new_window
 info-open_info
+quadro-new_quadro

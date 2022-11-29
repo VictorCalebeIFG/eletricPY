@@ -184,3 +184,7 @@ class Condutor(Element):
             for id in self.pc.last_inter:
                 self.canvas.tag_raise(id)
         except: None
+        try:
+            for id in self.pc.last_quadro:
+                self.canvas.tag_raise(id)
+        except: None

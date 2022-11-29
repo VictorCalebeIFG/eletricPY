@@ -170,6 +170,26 @@ def create_interr(pc):
     
     return interr
 
+def create_quadro(pc):
+
+    pop = pc.popup.__dict__
+
+    quadro = pc.current_obj.add_quadro(wall    = pop['wall'].get()         ,
+                                       percent = pop['percent'].get()/100  ,
+                                       size  = pop['tamanho'].get()       ,
+                                       pc = pc)
+    
+    if pc.popup.last == True:
+        save(
+            popupkey = pc.popup.id,
+            elementkey = quadro.codekey,
+            arguments = get_widgets_values(pop),
+            parent = pc.current_obj.codekey,
+            filename = current_project)
+    
+    
+    return quadro
+
 def create_space(pc):
 
     popdict = get_widgets_values(pc.popup.__dict__)

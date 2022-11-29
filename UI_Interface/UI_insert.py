@@ -171,6 +171,16 @@ class new_interr(popup_ui):
     def element_creator(self):
         return UI_backend.create_interr(self.pc)
 
+class new_quadro(popup_ui):
+    def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='550', topdis='200') -> None:
+        super().__init__(pc, master, title, width, height, leftdis, topdis)
+
+        self.create_popup_ui('quadro_ui')
+        self.create(False)
+    
+    def element_creator(self):
+        return UI_backend.create_quadro(self.pc)
+
 
 class new_space(popup_ui):
     def __init__(self, pc=None, master=None, width='370', height='380', leftdis='550', topdis='200') -> None:
