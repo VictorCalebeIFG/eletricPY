@@ -18,7 +18,7 @@ class ProjectCanvas:
         
 
         vscrollbar.config(command=canvas.yview)
-        vscrollbar.pack(side=tk.LEFT,fill=tk.Y) 
+        vscrollbar.pack(side=tk.RIGHT,fill=tk.Y) 
         hscrollbar.config(command=canvas.xview)
         hscrollbar.pack(side=tk.BOTTOM, fill=tk.X)
 

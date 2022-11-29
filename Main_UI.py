@@ -9,6 +9,7 @@ import json
 
 master = tk.Tk()
 master.state('zoomed')
+master.title('Projeto TCC')
 
 
 u_w, u_h = master.winfo_screenwidth() ,master.winfo_screenheight()
