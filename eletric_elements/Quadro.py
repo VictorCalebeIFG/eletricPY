@@ -33,7 +33,7 @@ class Quadro:
         id = canvas.create_rectangle(self.center[0], self.center[1], self.center[0] + self.height, self.center[1] + self.width, fill="white")
         self.id_list.append(id)
 
-        id = canvas.create_polygon(self.center[0], self.center[1], self.center[0] + self.height, self.center[1], fill = "black", outline = "black", width = 1)
+        id = canvas.create_polygon(self.center[0], self.center[1], self.center[0] , self.center[1] + self.width, self.center[0] + self.height, self.center[1], fill = "black", outline = "black", width = 1)
         
         self.id_list.append(id)
         
