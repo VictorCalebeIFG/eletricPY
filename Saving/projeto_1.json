@@ -1447,6 +1447,66 @@
                 "tamanho": 50
             },
             "parent": "comodo_KMXWSCGFFY"
+        },
+        {
+            "elemetkey": "comodo_NRIRNFUAJR",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 560.0,
+                "s_y": 350.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_CEDECARRAL",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 700.0,
+                "s_y": 350.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_LLNXYSBVXR",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "esquerda",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": "comodo_CEDECARRAL"
+        },
+        {
+            "elemetkey": "comodo_ZBDNNMUEVH",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 420.0,
+                "s_y": 770.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_SGGFDMAMGD",
+            "Arguments": {
+                "tipo": "cozinha",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "nao"
+            },
+            "parent": "comodo_ZBDNNMUEVH"
         }
     ]
 }
