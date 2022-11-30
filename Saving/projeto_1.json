@@ -2170,6 +2170,430 @@
                 "dis2": "0.5"
             },
             "parent": "comodo_QFHLJQPXMU"
+        },
+        {
+            "elemetkey": "comodo_YWHXTYZUBI",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 770.0,
+                "s_y": 420.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_CQMIDLXMJV",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2",
+                "altura": "4",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_YWHXTYZUBI"
+        },
+        {
+            "elemetkey": "attached_comodo_HMCGFLEHAB",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_YWHXTYZUBI"
+        },
+        {
+            "elemetkey": "space_CQDLRZXFQH",
+            "Arguments": {
+                "lado": "esquerda",
+                "dis1": 0.0,
+                "dis2": 0.0
+            },
+            "parent": "comodo_HMCGFLEHAB"
+        },
+        {
+            "elemetkey": "comodo_HMCGFLEHAB",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "attached_comodo_ERPEMCOOFP",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "2.9",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_YWHXTYZUBI"
+        },
+        {
+            "elemetkey": "comodo_GQYPQJQDRK",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.03",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 280.0,
+                "s_y": 490.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_QFCRGJLBZJ",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "esquerda",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_GQYPQJQDRK"
+        },
+        {
+            "elemetkey": "comodo_GQYPQJQDRK",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_QFCRGJLBZJ",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_ERPEMCOOFP",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "attached_comodo_MITRYUHWRV",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_YWHXTYZUBI"
+        },
+        {
+            "elemetkey": "attached_comodo_TUTOSODGND",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_YWHXTYZUBI"
+        },
+        {
+            "elemetkey": "comodo_MITRYUHWRV",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_TUTOSODGND",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_WKYYKJPMNN",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "3",
+                "altura": "3",
+                "s_x": 420.0,
+                "s_y": 350.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_WKYYKJPMNN",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_YWHXTYZUBI",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_CQMIDLXMJV",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_SFLYIJAANR",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "attached_comodo_XTDERYWVXN",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_SFLYIJAANR"
+        },
+        {
+            "elemetkey": "comodo_XTDERYWVXN",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_ZGPZZOSHLF",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6",
+                "altura": "3",
+                "s_x": 770.0,
+                "s_y": 630.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_DDRHPZVHST",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_ZGPZZOSHLF"
+        },
+        {
+            "elemetkey": "attached_comodo_NVOKVQLWOI",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_ZGPZZOSHLF"
+        },
+        {
+            "elemetkey": "comodo_DDRHPZVHST",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_NVOKVQLWOI",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_ZGPZZOSHLF",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_NIVQERRJGD",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_TBAIQEHTCQ",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6.2",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 560.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_OLJWKXYQOC",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_TBAIQEHTCQ"
+        },
+        {
+            "elemetkey": "attached_comodo_IJIKSOJGEB",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_TBAIQEHTCQ"
+        },
+        {
+            "elemetkey": "comodo_OLJWKXYQOC",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_IJIKSOJGEB",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_TBAIQEHTCQ",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_SEZSNLQTHR",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_RSUOOUHILU",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6",
+                "altura": "3",
+                "s_x": 770.0,
+                "s_y": 560.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_VGQBEZHQRU",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "direita",
+                "largura": "5",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_RSUOOUHILU"
+        },
+        {
+            "elemetkey": "comodo_RSUOOUHILU",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_EBYEZXQWTR",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_VGQBEZHQRU",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_BIPXYGOUHV",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6.1",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 630.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "attached_comodo_BWBFVFBLWL",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "esquerda",
+                "parede": "sim"
+            },
+            "parent": "comodo_BIPXYGOUHV"
+        },
+        {
+            "elemetkey": "attached_comodo_JQKLQKCTRG",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "3",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_BIPXYGOUHV"
+        },
+        {
+            "elemetkey": "comodo_JQKLQKCTRG",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "attached_comodo_VMSSFERGRQ",
+            "Arguments": {
+                "tipo": "comum",
+                "lado": "cima",
+                "largura": "3",
+                "altura": "2",
+                "referencia": "direita",
+                "parede": "sim"
+            },
+            "parent": "comodo_BIPXYGOUHV"
+        },
+        {
+            "elemetkey": "comodo_MPELMIHFQZ",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6.1",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 280.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_WUJTCSMNHK",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6.1",
+                "altura": "3",
+                "s_x": 700.0,
+                "s_y": 420.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_ZSQFEFTCKC",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "6.1",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 350.0
+            },
+            "parent": false
         }
     ]
 }

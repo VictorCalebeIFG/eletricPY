@@ -337,7 +337,7 @@ class open_info:
         main_frame.pack(anchor=tk.CENTER,pady=10)
 
     def criaInfo(self):
-        self.info.append(f"Área: {self.areaComodo}")
+        self.info.append(f"Área: {round(self.areaComodo, 2)}")
         self.qntdTUGs()
         self.potTUGs()
         self.potLamp()
