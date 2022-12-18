@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from SaveAndLoad import SaveAndLoad
 import UI_backend
 from util_.util import open_config,create_tk_labels,create_tk_drop_down,create_double_frame_ui_by_text, create_double_frame_ui_only_text, polynomial_fit,generate_key
 from UI_Interface.popupModel import popup_ui
@@ -386,6 +387,25 @@ class open_info:
         if (self.areaComodo > 6):
             potMinima = 100 + 60*int((self.areaComodo-6)/4)
         self.info.append(f"A potência mínima de iluminação pro cômodo é {potMinima} VA.")
+
+class saveLoadNewP:
+    def __init__(self,pc = None, master = None, tipo = "save") -> None:
+        self.pc = pc
+        self.master = master
+        self.tipo = tipo
+        self.escolheTipo()
+
+    def escolheTipo(self):
+        saveAndLoad = SaveAndLoad(self.pc.draw_canvas)
+        if (self.tipo == "saving"):
+            saveAndLoad.json_save()
+        if (self.tipo == "load"):
+            saveAndLoad.json_load()
+        if (self.tipo == "newp"):
+            #self.pc.draw_canvas.delete("all")
+            pass
+        
+
 
 
     

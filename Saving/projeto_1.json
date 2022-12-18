@@ -3246,6 +3246,96 @@
             "elemetkey": "comodo_FURIMQGZVA",
             "Arguments": "Delete",
             "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_RUXZJVGIXT",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 700.0,
+                "s_y": 280.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "interruptor_s1_KTAOOMWFTD",
+            "Arguments": {
+                "tipo": "s1",
+                "wall": "direita",
+                "percent": 50,
+                "dis": 10,
+                "radius": 30,
+                "label1": "",
+                "label2": "",
+                "label3": ""
+            },
+            "parent": "comodo_RUXZJVGIXT"
+        },
+        {
+            "elemetkey": "lampada_NQMAJWILSC",
+            "Arguments": {
+                "id": "",
+                "lamp_pos": "centro",
+                "raio": 30,
+                "pot": "",
+                "circ": ""
+            },
+            "parent": "comodo_RUXZJVGIXT"
+        },
+        {
+            "elemetkey": "comodo_TFTXJCMHWU",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 700.0,
+                "s_y": 280.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_IFMWRDFBCI",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 560.0,
+                "s_y": 280.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_HIPYVTWFTP",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 350.0
+            },
+            "parent": false
+        },
+        {
+            "elemetkey": "comodo_HIPYVTWFTP",
+            "Arguments": "Delete",
+            "parent": "Delete"
+        },
+        {
+            "elemetkey": "comodo_RYNTQPCYJH",
+            "Arguments": {
+                "tipo": "comum",
+                "esp": "0.1",
+                "largura": "5",
+                "altura": "3",
+                "s_x": 630.0,
+                "s_y": 350.0
+            },
+            "parent": false
         }
     ]
 }

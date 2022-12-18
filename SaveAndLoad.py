@@ -1,4 +1,4 @@
-"""import json
+import json
 import tkinter.filedialog as fd
 
 class SaveAndLoad():
@@ -34,4 +34,4 @@ class SaveAndLoad():
             if item['type'] in funcs:
                 funcs[item['type']](item['coords'], **item['options'])
     else:
-      pass"""
+      pass

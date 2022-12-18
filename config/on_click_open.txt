@@ -1,0 +1,6 @@
+#Esse arquivo serve para configurar qual UI vai disparar
+#quando alguém clica no botão.
+
+newp
+saving
+load
