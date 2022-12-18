@@ -5,9 +5,9 @@ from tkinter import ttk
 alpha_value = 0.9
 
 class popup_ui:
-    def __init__(self,pc = None,master = None, title = 'Título',width = '370',height = '250',leftdis='550',topdis='200') -> None:
+    def __init__(self,pc = None,master = None, title = 'Adicionar',width = '370',height = '250',leftdis='550',topdis='200') -> None:
         self.pop_w = tk.Toplevel(master)
-        self.pop_w.title("Adicionar")
+        self.pop_w.title(title)
         self.pop_w.geometry("{width}x{height}+{leftdis}+{topdis}".format(width = width,
                                                                         height = height,
                                                                         leftdis = leftdis,

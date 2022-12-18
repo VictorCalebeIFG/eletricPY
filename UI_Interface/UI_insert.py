@@ -75,7 +75,7 @@ class new_attached_room:
     def __init__(self,pc,master,pos = None) -> None:
         self.pop_w = tk.Toplevel(master)
         self.pop_w.title("Criar Novo Comodo")
-        self.pop_w.geometry("300x250+550+200")
+        self.pop_w.geometry("300x300+550+200")
         self.pos = pos
         self.pc = pc
         self.pc.popup = self
@@ -146,7 +146,7 @@ class new_lamp(popup_ui):
         return UI_backend.create_lamp(self.pc)
 
 class new_tom(popup_ui):
-    def __init__(self, pc=None, master=None, title='Título', width='370', height='400', leftdis='850', topdis='100') -> None:
+    def __init__(self, pc=None, master=None, title='Tomada', width='370', height='400', leftdis='850', topdis='100') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
 
         self.create_popup_ui('tom_ui')
@@ -162,7 +162,7 @@ class new_tom(popup_ui):
         return self.ui_element
 
 class new_interr(popup_ui):
-    def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='550', topdis='200') -> None:
+    def __init__(self, pc=None, master=None, title='Interruptor', width='370', height='400', leftdis='550', topdis='200') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
 
         self.create_popup_ui('interr_ui')
@@ -172,7 +172,7 @@ class new_interr(popup_ui):
         return UI_backend.create_interr(self.pc)
 
 class new_quadro(popup_ui):
-    def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='550', topdis='200') -> None:
+    def __init__(self, pc=None, master=None, title='Quadro de Carga', width='370', height='250', leftdis='550', topdis='200') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
 
         self.create_popup_ui('quadro_ui')
@@ -195,7 +195,7 @@ class new_space(popup_ui):
 
             
 class connection_ui(popup_ui):
-    def __init__(self, pc=None, master=None, title='Título', width='370', height='250', leftdis='500', topdis='200') -> None:
+    def __init__(self, pc=None, master=None, title='Condutor', width='550', height='300', leftdis='500', topdis='200') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
 
         self.create_popup_ui('connection_ui')
