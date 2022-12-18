@@ -257,16 +257,16 @@ def create_connection(pc):
         condutor.draw_by_text(pop['circ1'],index=index,size=pop['size'],space = pop['space'])
         index +=50
     if pop['circ2'] != "" : 
-        condutor.draw_by_text(pop['circ2'],index=index,size=pop['size'],space = pop['space'])
+        condutor.draw_by_text(pop['circ2'],index=index,size=pop['size'],space = pop['space'], circ = "-2-  ")
         index +=50
     if pop['circ3'] != "" :
-        condutor.draw_by_text(pop['circ3'],index=index,size=pop['size'],space = pop['space'])
+        condutor.draw_by_text(pop['circ3'],index=index,size=pop['size'],space = pop['space'], circ = "-3-  ")
         index +=50
     if pop['circ4'] != "" :
-        condutor.draw_by_text(pop['circ4'],index=index,size=pop['size'],space = pop['space']) 
+        condutor.draw_by_text(pop['circ4'],index=index,size=pop['size'],space = pop['space'], circ = "-4-  ") 
         index +=50
     if pop['circ5'] != "" :
-        condutor.draw_by_text(pop['circ5'],index=index,size=pop['size'],space = pop['space'])
+        condutor.draw_by_text(pop['circ5'],index=index,size=pop['size'],space = pop['space'], circ = "-5-  ")
 
     return condutor
 

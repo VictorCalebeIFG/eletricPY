@@ -18,8 +18,6 @@ def get_line_fragments(points):
             lines.append([points[i],points[i+1]])
         except : return lines
     return lines
-
-    return head2,head1,head3
         
 class Condutor(Element):
     def __init__(self, pc=None,A = (0,0),B = (0,0),curve = 100, smoth = 50,orientation = 0) -> None:

@@ -198,32 +198,35 @@ class connection_ui(popup_ui):
     def __init__(self, pc=None, master=None, title='Condutor', width='550', height='300', leftdis='500', topdis='200') -> None:
         super().__init__(pc, master, title, width, height, leftdis, topdis)
 
-        self.create_popup_ui('connection_ui')
-        self.frameA = tk.Frame(self.main_frame)
-        self.frameB = tk.Frame(self.main_frame)
-        
-        create_double_frame_ui_by_text(self.frameA,self.frameB,self=self,txt='UI/POPUP/connection_entrys')
-        self.frameA.grid(row=0,column=2,padx=20,pady=20)
-        self.frameB.grid(row=0,column=3,padx=20,pady=20)
-
         self.A = self.pc.conect_p[-2]
         self.B = self.pc.conect_p[-1]
 
-        self.pc.conect_p = []
+        if (self.A != self.B):
+            self.create_popup_ui('connection_ui')
+            self.frameA = tk.Frame(self.main_frame)
+            self.frameB = tk.Frame(self.main_frame)
 
-        if self.A[0]>self.B[0]: self.p1 = self.B ; self.p2 = self.A
-        else: self.p1=self.A ; self.p2 = self.B
+            create_double_frame_ui_by_text(self.frameA,self.frameB,self=self,txt='UI/POPUP/connection_entrys')
+            self.frameA.grid(row=0,column=2,padx=20,pady=20)
+            self.frameB.grid(row=0,column=3,padx=20,pady=20)
 
-        
-        if self.p1[1]> self.p2[1]:
-            self.angle.set(45)
+            self.pc.conect_p = []
+
+            if self.A[0]>self.B[0]: self.p1 = self.B ; self.p2 = self.A
+            else: self.p1=self.A ; self.p2 = self.B
+
+
+            if self.p1[1]> self.p2[1]:
+                self.angle.set(45)
+            else:
+                self.angle.set(135)
+
+            self.size.set(10)
+            self.space.set(10)
+
+            self.create(delete=False)
         else:
-            self.angle.set(135)
-
-        self.size.set(10)
-        self.space.set(10)
-
-        self.create(delete=False)
+            self.pop_w.destroy()
     
     def element_creator(self):
         return UI_backend.create_connection(self.pc)
